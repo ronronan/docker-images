@@ -40,3 +40,13 @@ Docker images used for Continious integration.
 |Tag|Node|Android|Java|Gradle|Ionic|Cordova|
 |--|--|--|--|--|--|--|
 | `latest`, `1.0`| `14.0` | `plateform-tool 28` (Android 9/10) | `8u252` | `6.5` | CLI `6.10.0` | `9.0.0`|
+
+## Kubectl & Helm Client
+
+**Role**: To use easily Kubectl & helm client in CI/CD like Gitlab.
+
+* [Link to Dockerhub](https://hub.docker.com/r/ronronan/kubectl-helm-client)
+
+|Tag|Kubectl|Helm|
+|--|--|--|
+| `latest`, `1.0.0`| `1.23.5` | `3.8.1` |
