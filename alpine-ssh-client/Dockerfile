@@ -1,3 +1,3 @@
-FROM alpine:3.15.0
+FROM alpine:3.16.2
 
-RUN apk add --update --no-cache openssh
+RUN apk add --update --no-cache openssh openssl
