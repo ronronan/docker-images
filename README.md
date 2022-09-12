@@ -18,7 +18,8 @@ Docker images used for Continious integration.
 
 |Tag|Alpine|OpenSSH|OpenSSL|
 |--|--|--|--|
-| `latest`, `3.15.0` | `3.15.0` | `8.8p1` | `1.1.1l` |
+| `latest`, `3.16.2` | `3.16.2` | `9.0p1` | `1.1.1q` |
+| `3.15.0` | `3.15.0` | `8.8p1` | `1.1.1l` |
 
 ## Postgresql FR
 
@@ -49,7 +50,7 @@ Docker images used for Continious integration.
 
 |Tag|Node|Android|Java|Gradle|Ionic|Cordova|
 |--|--|--|--|--|--|--|
-| `latest`, `1.0`| `14.0` | `plateform-tool 28` (Android 9/10) | `8u252` | `6.5` | CLI `6.10.0` | `9.0.0`|
+| `latest`, `1.0` | `14.0` | `plateform-tool 28` (Android 9/10) | `8u252` | `6.5` | CLI `6.10.0` | `9.0.0` |
 
 ## Kubectl & Helm Client
 
@@ -60,7 +61,8 @@ Docker images used for Continious integration.
 
 |Tag|Kubectl|Helm|
 |--|--|--|
-| `latest`, `1.0.0`| `1.23.5` | `3.8.1` |
+| `latest`, `1.0.1` | `1.25.0` | `3.9.4` |
+| `1.0.0` | `1.23.5` | `3.8.1` |
 
 ## Flutter android
 
@@ -71,4 +73,4 @@ Docker images used for Continious integration.
 
 |Tag|Flutter|Gradle|Java|Debian|Android|
 |--|--|--|--|--|--|
-| `latest`, `1.0.0`| `2.2.3` | `7.4.2` | `11` | `11.3` | `platforms;android-33 - buildtools;33.0.0` |
+| `latest`, `1.0.0` | `2.2.3` | `7.4.2` | `11` | `11.3` | `platforms;android-33 - buildtools;33.0.0` |

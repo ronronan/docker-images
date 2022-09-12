@@ -1,6 +1,6 @@
-FROM alpine:3.15.1
+FROM alpine:3.16.2
 
-RUN apk add --no-cache curl bash openssl && \
+RUN apk add --no-cache curl bash openssh openssl && \
   curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && \
   chmod +x ./kubectl && \
   mv ./kubectl  /usr/local/bin/kubectl && \
