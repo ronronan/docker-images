@@ -73,7 +73,8 @@ Docker images used for Continious integration.
 
 |Tag|Flutter|Gradle|Java|Debian|Android|
 |--|--|--|--|--|--|
-| `latest`, `1.0.1` | `3.7.1` | `7.6` | `17` | `11.6` | `platforms;android-33 - buildtools;33.0.0` |
+| `latest`, `1.0.2` | `3.7.7` | `7.6.1` | `17` | `11.6` | `platforms;android-33 - buildtools;33.0.2` |
+| `1.0.1` | `3.7.1` | `7.6` | `17` | `11.6` | `platforms;android-33 - buildtools;33.0.0` |
 | `1.0.0` | `2.2.3` | `7.4.2` | `11` | `11.3` | `platforms;android-33 - buildtools;33.0.0` |
 
 ## OpenVPN
