@@ -18,7 +18,8 @@ Docker images used for Continious integration.
 
 |Tag|Alpine|OpenSSH|OpenSSL|
 |--|--|--|--|
-| `latest`, `3.16.2` | `3.16.2` | `9.0p1` | `1.1.1q` |
+| `latest`, `3.18.2` | `3.18.2` | `9.3p2` | `3.1.1` |
+| `3.16.2` | `3.16.2` | `9.0p1` | `1.1.1q` |
 | `3.15.0` | `3.15.0` | `8.8p1` | `1.1.1l` |
 
 ## Postgresql FR
@@ -30,16 +31,9 @@ Docker images used for Continious integration.
 
 |Tag|Postgresql|
 |--|--|
-| `latest`, `14.5` | `14.5` |
-| `14.4` | `14.4` |
-| `14.3` | `14.3` |
-| `14.2` | `14.2` |
-| `14.1` | `14.1` |
-| `14.0` | `14.0` |
-| `13.8` | `13.8` |
-| `13.7` | `13.7` |
-| `13.6` | `13.6` |
-| `13.5` | `13.5` |
+| `latest`, `15.3` | `15.3` |
+| `14.8` | `14.8` |
+| `13.11` | `13.11` |
 
 ## Ionic with Android & Gradle
 
@@ -61,7 +55,8 @@ Docker images used for Continious integration.
 
 |Tag|Kubectl|Helm|
 |--|--|--|
-| `latest`, `1.0.1` | `1.25.0` | `3.9.4` |
+| `latest`, `1.0.2` | `1.27.4` | `3.12.2` |
+| `1.0.1` | `1.25.0` | `3.9.4` |
 | `1.0.0` | `1.23.5` | `3.8.1` |
 
 ## Flutter android
