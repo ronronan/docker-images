@@ -35,17 +35,6 @@ Docker images used for Continious integration.
 | `14.8` | `14.8` |
 | `13.11` | `13.11` |
 
-## Ionic with Android & Gradle
-
-**Role**: To build Ionic Application for Android Devices.
-
-* [Link to Dockerhub](https://hub.docker.com/r/ronronan/ionic-android)
-* [Link to Github](https://github.com/ronronan/docker-images)
-
-|Tag|Node|Android|Java|Gradle|Ionic|Cordova|
-|--|--|--|--|--|--|--|
-| `latest`, `1.0` | `14.0` | `plateform-tool 28` (Android 9/10) | `8u252` | `6.5` | CLI `6.10.0` | `9.0.0` |
-
 ## Kubectl & Helm Client
 
 **Role**: To use easily Kubectl & helm client in CI/CD like Gitlab.
@@ -71,14 +60,3 @@ Docker images used for Continious integration.
 | `latest`, `1.0.2` | `3.7.7` | `7.6.1` | `17` | `11.6` | `platforms;android-33 - buildtools;33.0.2` |
 | `1.0.1` | `3.7.1` | `7.6` | `17` | `11.6` | `platforms;android-33 - buildtools;33.0.0` |
 | `1.0.0` | `2.2.3` | `7.4.2` | `11` | `11.3` | `platforms;android-33 - buildtools;33.0.0` |
-
-## OpenVPN
-
-**Role**: To launch an VPN server on Docker
-
-* [Link to Dockerhub](https://hub.docker.com/r/ronronan/openvpn)
-* [Link to Github](https://github.com/ronronan/docker-images)
-
-|Tag|Alpine|OpenVPN|
-|--|--|--|
-| `latest`, `1.0.0` | `3.16.2` | `2.5.6` |
