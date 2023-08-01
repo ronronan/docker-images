@@ -2,7 +2,7 @@ FROM debian:12.1-slim
 LABEL MAINTAINER="Ronan MOREL <me@3rm.fr>"
 USER root
 
-ENV GRADLE_VERSION "8.2.1"
+ENV GRADLE_VERSION "7.6.2"
 ENV FLUTTER_VERSION "3.7.12"
 
 # Install base packages
@@ -34,7 +34,12 @@ RUN cd ${ANDROID_SDK_ROOT}/cmdline-tools/9.0/bin && \
   yes | ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} --licenses && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} --update && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-34" && \
-  ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "build-tools;34.0.0"
+  ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-28" && \
+  ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-30" && \
+  ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-31" && \
+  ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-33" && \
+  ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "build-tools;34.0.0" && \
+  ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "build-tools;30.0.3"
 
 # Install Flutter
 RUN cd /opt && \
