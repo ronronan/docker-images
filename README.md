@@ -1,6 +1,6 @@
 # Docker Images
 
-Docker images used for Continious integration.
+Docker images used for Continuous integration.
 
 **Maintained by** : [Ronan M.](https://github.com/ronronan)
 
@@ -11,7 +11,7 @@ Docker images used for Continious integration.
 
 ## Alpine SSH
 
-**Role**: To have mini linux to use SSH client commands.
+**Role**: To have mini Linux to use SSH client commands.
 
 * [Link to Dockerhub](https://hub.docker.com/r/ronronan/alpine-ssh-client)
 * [Link to Github](https://github.com/ronronan/docker-images)
@@ -57,6 +57,5 @@ Docker images used for Continious integration.
 
 |Tag|Flutter|Gradle|Java|Debian|Android|
 |--|--|--|--|--|--|
-| `latest`, `1.0.2` | `3.7.7` | `7.6.1` | `17` | `11.6` | `platforms;android-33 - buildtools;33.0.2` |
-| `1.0.1` | `3.7.1` | `7.6` | `17` | `11.6` | `platforms;android-33 - buildtools;33.0.0` |
-| `1.0.0` | `2.2.3` | `7.4.2` | `11` | `11.3` | `platforms;android-33 - buildtools;33.0.0` |
+| `latest`, `1.1.0` | `3.7.12` | `8.2.1` | `17` | `12.1` | `platforms;android-34 - buildtools;34.0.0` |
+| `1.0.2` | `3.7.7` | `7.6.1` | `17` | `11.6` | `platforms;android-33 - buildtools;33.0.2` |
