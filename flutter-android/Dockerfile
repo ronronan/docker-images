@@ -6,7 +6,7 @@ ENV GRADLE_VERSION "7.6.2"
 ENV FLUTTER_VERSION "3.7.12"
 
 # Install base packages
-RUN groupadd -r flutterdev && useradd -r -g flutterdev flutterdev && \
+RUN groupadd -r flutterdev -g 1000 && useradd -u 1000 -r -g flutterdev flutterdev && \
   mkdir -p /home/flutterdev && chown flutterdev:flutterdev /home/flutterdev && \
   mkdir -p /opt && chmod 777 /opt && \
   apt-get update && apt-get upgrade -y && \
