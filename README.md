@@ -57,5 +57,6 @@ Docker images used for Continuous integration.
 
 |Tag|Flutter|Gradle|Java|Debian|Android|
 |--|--|--|--|--|--|
-| `latest`, `1.1.0` | `3.7.12` | `7.6.2` | `17` | `12.1` | `platforms;android-34 - buildtools;34.0.0` |
+| `latest`, `1.1.1` | `3.10.6` | `7.6.2` | `17` | `12.1` | `platforms;android-34 - buildtools;34.0.0` |
+| `1.1.0` | `3.7.12` | `7.6.2` | `17` | `12.1` | `platforms;android-34 - buildtools;34.0.0` |
 | `1.0.2` | `3.7.7` | `7.6.1` | `17` | `11.6` | `platforms;android-33 - buildtools;33.0.2` |

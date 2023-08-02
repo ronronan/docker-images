@@ -2,9 +2,6 @@ FROM debian:12.1-slim
 LABEL MAINTAINER="Ronan MOREL <me@3rm.fr>"
 USER root
 
-ENV GRADLE_VERSION "7.6.2"
-ENV FLUTTER_VERSION "3.7.12"
-
 # Install base packages
 RUN groupadd -r flutterdev -g 1000 && useradd -u 1000 -r -g flutterdev flutterdev && \
   mkdir -p /home/flutterdev && chown flutterdev:flutterdev /home/flutterdev && \
@@ -13,6 +10,8 @@ RUN groupadd -r flutterdev -g 1000 && useradd -u 1000 -r -g flutterdev flutterde
   apt-get install -y nano curl git g++ gcc make build-essential clang cmake unzip ninja-build pkg-config libgtk-3-dev && \
   apt-get install -y openjdk-17-jdk && apt-get clean
 
+ENV GRADLE_VERSION "7.6.2"
+ENV FLUTTER_VERSION "3.10.6"
 USER flutterdev
 
 # Install Gradle
@@ -33,11 +32,10 @@ RUN mkdir -p ${ANDROID_SDK_ROOT}/cmdline-tools && cd ${ANDROID_SDK_ROOT}/cmdline
 RUN cd ${ANDROID_SDK_ROOT}/cmdline-tools/9.0/bin && \
   yes | ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} --licenses && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} --update && \
-  ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-34" && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-28" && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-30" && \
-  ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-31" && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-33" && \
+  ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-34" && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "build-tools;34.0.0" && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "build-tools;30.0.3"
 
