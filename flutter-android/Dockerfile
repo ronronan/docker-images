@@ -1,4 +1,4 @@
-FROM debian:12.1-slim
+FROM debian:12.5-slim
 LABEL MAINTAINER="Ronan MOREL <me@3rm.fr>"
 USER root
 
@@ -10,8 +10,8 @@ RUN groupadd -r flutterdev -g 1000 && useradd -u 1000 -r -g flutterdev flutterde
   apt-get install -y nano curl git g++ gcc make build-essential clang cmake unzip ninja-build pkg-config libgtk-3-dev && \
   apt-get install -y openjdk-17-jdk && apt-get clean
 
-ENV GRADLE_VERSION "7.6.2"
-ENV FLUTTER_VERSION "3.10.6"
+ENV GRADLE_VERSION "7.6.4"
+ENV FLUTTER_VERSION "3.19.5"
 USER flutterdev
 
 # Install Gradle
