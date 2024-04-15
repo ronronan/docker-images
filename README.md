@@ -32,7 +32,8 @@ Docker images used for Continuous integration.
 
 | Tag              | Postgresql |
 | ---------------- | ---------- |
-| `latest`, `15.3` | `15.3`     |
+| `latest`, `16.2` | `16.2`     |
+| `15.3`           | `15.3`     |
 | `14.8`           | `14.8`     |
 | `13.11`          | `13.11`    |
 
