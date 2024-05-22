@@ -19,10 +19,30 @@ Docker images used for Continuous integration.
 
 | Tag                | Alpine   | OpenSSH | OpenSSL  |
 | ------------------ | -------- | ------- | -------- |
-| `latest`, `3.19.1` | `3.19.1` | `9.6p1` | `3.1.4`  |
+| `latest`, `3.19.1` | `3.19.1` | `9.6p1` | `3.1.5`  |
 | `3.18.2`           | `3.18.2` | `9.3p2` | `3.1.1`  |
 | `3.16.2`           | `3.16.2` | `9.0p1` | `1.1.1q` |
 | `3.15.0`           | `3.15.0` | `8.8p1` | `1.1.1l` |
+
+### Commands
+
+- Build
+
+```bash
+docker build -t ronronan/alpine-ssh-client:latest -f ./alpine-ssh-client/Dockerfile .
+```
+
+- Tag
+
+```bash
+docker tag ronronan/alpine-ssh-client:latest ronronan/alpine-ssh-client:3.19.1
+```
+
+- Push
+
+```bash
+docker push ronronan/alpine-ssh-client:latest
+```
 
 ## PostgreSQL FR
 
