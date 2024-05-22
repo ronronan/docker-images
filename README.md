@@ -24,7 +24,7 @@ Docker images used for Continuous integration.
 | `3.16.2`           | `3.16.2` | `9.0p1` | `1.1.1q` |
 | `3.15.0`           | `3.15.0` | `8.8p1` | `1.1.1l` |
 
-## Postgresql FR
+## PostgreSQL FR
 
 **Role**: To have database server setup with French Lang.
 
@@ -33,10 +33,31 @@ Docker images used for Continuous integration.
 
 | Tag              | Postgresql |
 | ---------------- | ---------- |
-| `latest`, `16.2` | `16.2`     |
-| `15.3`           | `15.3`     |
-| `14.8`           | `14.8`     |
-| `13.11`          | `13.11`    |
+| `latest`, `16.3` | `16.3`     |
+| `15.7`           | `15.7`     |
+| `14.12`          | `14.12`    |
+| `13.15`          | `13.15`    |
+| `12.19`          | `12.19`    |
+
+### Commands
+
+- Build
+
+```bash
+docker build -t ronronan/postgresql-fr:latest -f ./postgresql-fr/Dockerfile .
+```
+
+- Tag
+
+```bash
+docker tag ronronan/postgresql-fr:latest ronronan/postgresql-fr:16.3
+```
+
+- Push
+
+```bash
+docker push ronronan/postgresql-fr:latest
+```
 
 ## Kubectl & Helm Client
 
