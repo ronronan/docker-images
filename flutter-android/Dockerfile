@@ -11,7 +11,7 @@ RUN groupadd -r flutterdev -g 1000 && useradd -u 1000 -r -g flutterdev flutterde
   apt-get install -y openjdk-17-jdk && apt-get clean
 
 ENV GRADLE_VERSION "7.6.4"
-ENV FLUTTER_VERSION "3.19.5"
+ENV FLUTTER_VERSION "3.22.0"
 USER flutterdev
 
 # Install Gradle
@@ -26,10 +26,10 @@ ENV FLUTTER_HOME /opt/flutter-${FLUTTER_VERSION}
 
 # Install android SDK, tools and platforms
 RUN mkdir -p ${ANDROID_SDK_ROOT}/cmdline-tools && cd ${ANDROID_SDK_ROOT}/cmdline-tools && \
-  curl -L https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip -o commandlinetools.zip && \
-  unzip commandlinetools.zip && rm commandlinetools.zip && mv cmdline-tools 9.0
+  curl -L https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip?hl=fr -o commandlinetools.zip && \
+  unzip commandlinetools.zip && rm commandlinetools.zip && mv cmdline-tools 12.0
 
-RUN cd ${ANDROID_SDK_ROOT}/cmdline-tools/9.0/bin && \
+RUN cd ${ANDROID_SDK_ROOT}/cmdline-tools/12.0/bin && \
   yes | ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} --licenses && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} --update && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-28" && \
@@ -46,6 +46,6 @@ RUN cd /opt && \
   git config --global --add safe.directory $FLUTTER_HOME && ${FLUTTER_HOME}/bin/flutter precache
 
 # Add sdkmanager & android tools in path
-ENV PATH $PATH:${ANDROID_SDK_ROOT}/platform-tools/:${ANDROID_SDK_ROOT}/cmdline-tools/9.0/bin/:${GRADLE_HOME}/bin:${FLUTTER_HOME}/bin
+ENV PATH $PATH:${ANDROID_SDK_ROOT}/platform-tools/:${ANDROID_SDK_ROOT}/cmdline-tools/12.0/bin/:${GRADLE_HOME}/bin:${FLUTTER_HOME}/bin
 
 WORKDIR /app
