@@ -26,6 +26,12 @@ Docker images used for Continuous integration.
 
 ### Commands
 
+- Test
+
+```bash
+docker run --rm -it ronronan/alpine-ssh-client:latest sh
+```
+
 - Build
 
 ```bash
@@ -61,6 +67,12 @@ docker push ronronan/alpine-ssh-client:latest
 
 ### Commands
 
+- Test
+
+```bash
+docker run --rm -it ronronan/postgresql-fr:latest bash
+```
+
 - Build
 
 ```bash
@@ -86,12 +98,39 @@ docker push ronronan/postgresql-fr:latest
 - [Link to Dockerhub](https://hub.docker.com/r/ronronan/kubectl-helm-client)
 - [Link to Github](https://github.com/ronronan/docker-images)
 
-| Tag               | Kubectl  | Helm     |
-| ----------------- | -------- | -------- |
-| `latest`, `1.0.3` | `1.29.3` | `3.14.4` |
-| `1.0.2`           | `1.27.4` | `3.12.2` |
-| `1.0.1`           | `1.25.0` | `3.9.4`  |
-| `1.0.0`           | `1.23.5` | `3.8.1`  |
+| Tag               | Kubectl  | Helm          |
+| ----------------- | -------- | ------------- |
+| `latest`, `1.0.4` | `1.30.1` | `3.15.0-rc.2` |
+| `1.0.3`           | `1.29.3` | `3.14.4`      |
+| `1.0.2`           | `1.27.4` | `3.12.2`      |
+| `1.0.1`           | `1.25.0` | `3.9.4`       |
+| `1.0.0`           | `1.23.5` | `3.8.1`       |
+
+### Commands
+
+- Test
+
+```bash
+docker run --rm -it ronronan/kubectl-helm-client:latest sh
+```
+
+- Build
+
+```bash
+docker build -t ronronan/kubectl-helm-client:latest -f ./kubectl-helm-client/Dockerfile .
+```
+
+- Tag
+
+```bash
+docker tag ronronan/kubectl-helm-client:latest ronronan/kubectl-helm-client:1.0.4
+```
+
+- Push
+
+```bash
+docker push ronronan/kubectl-helm-client:latest
+```
 
 ## Flutter android
 
