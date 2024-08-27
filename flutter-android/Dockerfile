@@ -1,4 +1,4 @@
-FROM debian:12.5-slim
+FROM debian:12.6-slim
 LABEL MAINTAINER="Ronan MOREL <me@3rm.fr>"
 USER root
 
@@ -10,8 +10,8 @@ RUN groupadd -r flutterdev -g 1000 && useradd -u 1000 -r -g flutterdev flutterde
   apt-get install -y nano curl git g++ gcc make build-essential clang cmake unzip ninja-build pkg-config libgtk-3-dev && \
   apt-get install -y openjdk-17-jdk && apt-get clean
 
-ENV GRADLE_VERSION "7.6.4"
-ENV FLUTTER_VERSION "3.22.0"
+ENV GRADLE_VERSION=7.6.4 \
+    FLUTTER_VERSION=3.24.1
 USER flutterdev
 
 # Install Gradle
@@ -19,10 +19,10 @@ RUN cd /opt && curl -L https://downloads.gradle.org/distributions/gradle-${GRADL
   unzip gradle.zip && rm gradle.zip
 
 # Environnement variables pour android tools
-ENV JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64
-ENV GRADLE_HOME /opt/gradle-${GRADLE_VERSION}
-ENV ANDROID_SDK_ROOT /opt/android-sdk
-ENV FLUTTER_HOME /opt/flutter-${FLUTTER_VERSION}
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64 \
+    GRADLE_HOME=/opt/gradle-${GRADLE_VERSION} \
+    ANDROID_SDK_ROOT=/opt/android-sdk \
+    FLUTTER_HOME=/opt/flutter-${FLUTTER_VERSION}
 
 # Install android SDK, tools and platforms
 RUN mkdir -p ${ANDROID_SDK_ROOT}/cmdline-tools && cd ${ANDROID_SDK_ROOT}/cmdline-tools && \
@@ -47,6 +47,6 @@ RUN cd /opt && \
   git config --global --add safe.directory $FLUTTER_HOME && ${FLUTTER_HOME}/bin/flutter precache
 
 # Add sdkmanager & android tools in path
-ENV PATH $PATH:${ANDROID_SDK_ROOT}/platform-tools/:${ANDROID_SDK_ROOT}/cmdline-tools/12.0/bin/:${GRADLE_HOME}/bin:${FLUTTER_HOME}/bin
+ENV PATH=$PATH:${ANDROID_SDK_ROOT}/platform-tools/:${ANDROID_SDK_ROOT}/cmdline-tools/12.0/bin/:${GRADLE_HOME}/bin:${FLUTTER_HOME}/bin
 
 WORKDIR /app
