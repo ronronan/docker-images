@@ -36,6 +36,7 @@ RUN cd ${ANDROID_SDK_ROOT}/cmdline-tools/12.0/bin && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-33" && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-34" && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-35" && \
+  ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "ndk;27.0.12077973" && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "build-tools;34.0.0" && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "build-tools;35.0.1"
 
