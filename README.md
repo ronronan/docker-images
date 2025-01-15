@@ -99,14 +99,15 @@ docker push ronronan/kubectl-helm-client:latest
 - [Link to Dockerhub](https://hub.docker.com/r/ronronan/flutter-android)
 - [Link to Github](https://github.com/ronronan/docker-images)
 
-| Tag               | Flutter  | Gradle  | Java | Debian | Android                                    |
-| ----------------- | -------- | ------- | ---- | ------ | ------------------------------------------ |
-| `latest`, `1.1.4` | `3.24.3` | `7.6.4` | `17` | `12.7` | `platforms;android-34 - buildtools;34.0.0` |
-| `1.1.3`           | `3.22.0` | `7.6.4` | `17` | `12.5` | `platforms;android-34 - buildtools;34.0.0` |
-| `1.1.2`           | `3.19.5` | `7.6.4` | `17` | `12.5` | `platforms;android-34 - buildtools;34.0.0` |
-| `1.1.1`           | `3.10.6` | `7.6.2` | `17` | `12.1` | `platforms;android-34 - buildtools;34.0.0` |
-| `1.1.0`           | `3.7.12` | `7.6.2` | `17` | `12.1` | `platforms;android-34 - buildtools;34.0.0` |
-| `1.0.2`           | `3.7.7`  | `7.6.1` | `17` | `11.6` | `platforms;android-33 - buildtools;33.0.2` |
+| Tag               | Flutter  | Gradle  | Java | Android                                    |
+| ----------------- | -------- | ------- | ---- | ------------------------------------------ |
+| `latest`, `1.2.0` | `3.27.2` | `8.12`  | `21` | `platforms;android-35 - buildtools;35.0.1` |
+| `1.1.4`           | `3.24.3` | `7.6.4` | `17` | `platforms;android-34 - buildtools;34.0.0` |
+| `1.1.3`           | `3.22.0` | `7.6.4` | `17` | `platforms;android-34 - buildtools;34.0.0` |
+| `1.1.2`           | `3.19.5` | `7.6.4` | `17` | `platforms;android-34 - buildtools;34.0.0` |
+| `1.1.1`           | `3.10.6` | `7.6.2` | `17` | `platforms;android-34 - buildtools;34.0.0` |
+| `1.1.0`           | `3.7.12` | `7.6.2` | `17` | `platforms;android-34 - buildtools;34.0.0` |
+| `1.0.2`           | `3.7.7`  | `7.6.1` | `17` | `platforms;android-33 - buildtools;33.0.2` |
 
 ### Commands
 
@@ -125,7 +126,7 @@ docker build -t ronronan/flutter-android:latest -f ./flutter-android/Dockerfile 
 - Tag
 
 ```bash
-docker tag ronronan/flutter-android:latest ronronan/flutter-android:1.1.4
+docker tag ronronan/flutter-android:latest ronronan/flutter-android:1.2.0
 ```
 
 - Push
