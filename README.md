@@ -50,47 +50,6 @@ docker tag ronronan/alpine-ssh-client:latest ronronan/alpine-ssh-client:3.21.2
 docker push ronronan/alpine-ssh-client:latest
 ```
 
-## PostgreSQL FR
-
-**Role**: To have database server setup with French Lang.
-
-- [Link to Dockerhub](https://hub.docker.com/r/ronronan/postgresql-fr)
-- [Link to Github](https://github.com/ronronan/docker-images)
-
-| Tag              | Postgresql |
-| ---------------- | ---------- |
-| `latest`, `16.3` | `16.3`     |
-| `15.7`           | `15.7`     |
-| `14.12`          | `14.12`    |
-| `13.15`          | `13.15`    |
-| `12.19`          | `12.19`    |
-
-### Commands
-
-- Test
-
-```bash
-docker run --rm -it ronronan/postgresql-fr:latest bash
-```
-
-- Build
-
-```bash
-docker build -t ronronan/postgresql-fr:latest -f ./postgresql-fr/Dockerfile .
-```
-
-- Tag
-
-```bash
-docker tag ronronan/postgresql-fr:latest ronronan/postgresql-fr:16.3
-```
-
-- Push
-
-```bash
-docker push ronronan/postgresql-fr:latest
-```
-
 ## Kubectl & Helm Client
 
 **Role**: To use easily Kubectl & helm client in CI/CD like Gitlab.
