@@ -41,7 +41,7 @@ docker build -t ronronan/alpine-ssh-client:latest -f ./alpine-ssh-client/Dockerf
 - Tag
 
 ```bash
-docker tag ronronan/alpine-ssh-client:latest ronronan/alpine-ssh-client:3.19.1
+docker tag ronronan/alpine-ssh-client:latest ronronan/alpine-ssh-client:3.21.2
 ```
 
 - Push
@@ -100,7 +100,8 @@ docker push ronronan/postgresql-fr:latest
 
 | Tag               | Kubectl  | Helm          |
 | ----------------- | -------- | ------------- |
-| `latest`, `1.0.4` | `1.30.1` | `3.15.0-rc.2` |
+| `latest`, `1.0.5` | `1.31.0` | `3.16.4`      |
+| `1.0.4`           | `1.30.1` | `3.15.0-rc.2` |
 | `1.0.3`           | `1.29.3` | `3.14.4`      |
 | `1.0.2`           | `1.27.4` | `3.12.2`      |
 | `1.0.1`           | `1.25.0` | `3.9.4`       |
@@ -123,7 +124,7 @@ docker build -t ronronan/kubectl-helm-client:latest -f ./kubectl-helm-client/Doc
 - Tag
 
 ```bash
-docker tag ronronan/kubectl-helm-client:latest ronronan/kubectl-helm-client:1.0.4
+docker tag ronronan/kubectl-helm-client:latest ronronan/kubectl-helm-client:1.0.5
 ```
 
 - Push
