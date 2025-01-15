@@ -32,7 +32,11 @@ RUN mkdir -p ${ANDROID_SDK_ROOT}/cmdline-tools && cd ${ANDROID_SDK_ROOT}/cmdline
 RUN cd ${ANDROID_SDK_ROOT}/cmdline-tools/12.0/bin && \
   yes | ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} --licenses && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} --update && \
+  ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-31" && \
+  ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-33" && \
+  ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-34" && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-35" && \
+  ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "build-tools;34.0.0" && \
   ./sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "build-tools;35.0.1"
 
 # Install Flutter
