@@ -19,7 +19,8 @@ Docker images used for Continuous integration.
 
 | Tag                | Alpine   | OpenSSH | OpenSSL  |
 | ------------------ | -------- | ------- | -------- |
-| `latest`, `3.21.2` | `3.21.2` | `9.9p1` | `3.3.2`  |
+| `latest`, `3.21.3` | `3.21.3` | `9.9p2` | `3.3.3`  |
+| `3.21.2`           | `3.21.2` | `9.9p1` | `3.3.2`  |
 | `3.19.1`           | `3.19.1` | `9.6p1` | `3.1.5`  |
 | `3.18.2`           | `3.18.2` | `9.3p2` | `3.1.1`  |
 | `3.15.0`           | `3.15.0` | `8.8p1` | `1.1.1l` |
@@ -41,7 +42,7 @@ docker build -t ronronan/alpine-ssh-client:latest -f ./alpine-ssh-client/Dockerf
 - Tag
 
 ```bash
-docker tag ronronan/alpine-ssh-client:latest ronronan/alpine-ssh-client:3.21.2
+docker tag ronronan/alpine-ssh-client:latest ronronan/alpine-ssh-client:3.21.3
 ```
 
 - Push
@@ -59,7 +60,8 @@ docker push ronronan/alpine-ssh-client:latest
 
 | Tag               | Kubectl  | Helm          |
 | ----------------- | -------- | ------------- |
-| `latest`, `1.0.5` | `1.31.0` | `3.16.4`      |
+| `latest`, `1.0.6` | `1.31.0` | `3.17.3`      |
+| `1.0.5`           | `1.31.0` | `3.16.4`      |
 | `1.0.4`           | `1.30.1` | `3.15.0-rc.2` |
 | `1.0.3`           | `1.29.3` | `3.14.4`      |
 | `1.0.2`           | `1.27.4` | `3.12.2`      |
@@ -83,7 +85,7 @@ docker build -t ronronan/kubectl-helm-client:latest -f ./kubectl-helm-client/Doc
 - Tag
 
 ```bash
-docker tag ronronan/kubectl-helm-client:latest ronronan/kubectl-helm-client:1.0.5
+docker tag ronronan/kubectl-helm-client:latest ronronan/kubectl-helm-client:1.0.6
 ```
 
 - Push
@@ -101,7 +103,8 @@ docker push ronronan/kubectl-helm-client:latest
 
 | Tag               | Flutter  | Gradle  | Java | Android                                    |
 | ----------------- | -------- | ------- | ---- | ------------------------------------------ |
-| `latest`, `1.2.0` | `3.27.2` | `8.12`  | `21` | `platforms;android-35 - buildtools;35.0.1` |
+| `latest`, `1.3.0` | `3.29.2` | `8.14`  | `24` | `platforms;android-35 - buildtools;34.0.0` |
+| `1.2.0`           | `3.27.2` | `8.12`  | `21` | `platforms;android-35 - buildtools;34.0.0` |
 | `1.1.4`           | `3.24.3` | `7.6.4` | `17` | `platforms;android-34 - buildtools;34.0.0` |
 | `1.1.3`           | `3.22.0` | `7.6.4` | `17` | `platforms;android-34 - buildtools;34.0.0` |
 | `1.1.2`           | `3.19.5` | `7.6.4` | `17` | `platforms;android-34 - buildtools;34.0.0` |
@@ -126,7 +129,7 @@ docker build -t ronronan/flutter-android:latest -f ./flutter-android/Dockerfile 
 - Tag
 
 ```bash
-docker tag ronronan/flutter-android:latest ronronan/flutter-android:1.2.0
+docker tag ronronan/flutter-android:latest ronronan/flutter-android:1.3.0
 ```
 
 - Push
