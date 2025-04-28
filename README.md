@@ -103,7 +103,7 @@ docker push ronronan/kubectl-helm-client:latest
 
 | Tag               | Flutter  | Gradle  | Java | Android                                    |
 | ----------------- | -------- | ------- | ---- | ------------------------------------------ |
-| `latest`, `1.3.0` | `3.29.2` | `8.14`  | `24` | `platforms;android-35 - buildtools;34.0.0` |
+| `latest`, `1.3.0` | `3.29.2` | `8.14`  | `21` | `platforms;android-35 - buildtools;34.0.0` |
 | `1.2.0`           | `3.27.2` | `8.12`  | `21` | `platforms;android-35 - buildtools;34.0.0` |
 | `1.1.4`           | `3.24.3` | `7.6.4` | `17` | `platforms;android-34 - buildtools;34.0.0` |
 | `1.1.3`           | `3.22.0` | `7.6.4` | `17` | `platforms;android-34 - buildtools;34.0.0` |

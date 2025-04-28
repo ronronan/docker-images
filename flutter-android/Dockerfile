@@ -1,4 +1,4 @@
-FROM eclipse-temurin:24-jdk-noble
+FROM eclipse-temurin:21-jdk-jammy
 LABEL MAINTAINER="Ronan MOREL <me@3rm.fr>"
 USER root
 
