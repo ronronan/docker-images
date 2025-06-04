@@ -10,8 +10,8 @@ RUN (userdel -f ubuntu || true ) && groupadd -r flutterdev -g 1000 && useradd -u
   apt-get install -y nano curl git g++ gcc make build-essential clang cmake unzip ninja-build pkg-config libgtk-3-dev && \
   apt-get clean
 
-ENV GRADLE_VERSION=8.14 \
-    FLUTTER_VERSION=3.29.3
+ENV GRADLE_VERSION=8.14.1 \
+    FLUTTER_VERSION=3.32.1
 USER flutterdev
 
 # Install Gradle
